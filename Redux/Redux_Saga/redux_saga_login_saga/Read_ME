@@ -1,0 +1,44 @@
+This example have Login with Menu.
+
+
+npm install --save redux redux-thunk history
+
+
+
+
+Approach to work with Login Example :
+
+--------------------------------------
+First create Store
+get data from store.
+Reference:
+----------
+https://scotch.io/tutorials/build-a-media-library-with-react-redux-and-redux-saga-part-1
+
+
+https://scotch.io/tutorials/build-a-media-library-with-react-redux-and-redux-saga-part-2
+
+
+const MyEnhancedComponent = 
+  connect(mapStateToProps, matchDispatchToProps)(WrappedComponent);
+  
+ Reference to the axios post method:
+ https://github.com/axios/axios
+
+ axios.post('/user', {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+ 1. Afer performing the user login dispatch the token will be stored in to the Redux State.
+ 2. If user clicks on the logout button unless and until we remove the token from the Redux State,
+ Assumes the user logged in.
+ 3. When user clicks on the logout button , We must ensure that the token should be removed from the state.
+
+pushState

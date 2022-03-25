@@ -1,0 +1,169 @@
+defaultProps
+-------------
+- Property in React Component.
+- 
+  Class Components:
+  -----------------
+  class ReactComp extends React.Component{
+	static defaultProps = {
+	
+	}
+  }
+  
+  ReactComp.defaultProps = {
+	<propert_Name> : 'defaultValue'
+  }
+  
+  function ReactFCComp(props){
+  }
+  ReactFCComp.defaultProps = {}
+  
+
+PropTypes:
+----------
+- Allow the prop type for a property.
+- It acts as a documentation 
+- Developers to know the expected type of the prop.
+- Components will work without setting the PropTypes.
+- React will warn if u try to set a prop which is different type from defined type.
+
+We can validate whether a prop is :
+- is Required.
+- Contains a Primitive Type.
+- Containg something is renderable or not.
+- Is a React Element.
+- Several Defined Types.
+- An array contains the items of specified type.
+- An instance of a class.
+- An object that has a specific shape.
+
+- Prior to React 15.5 --> PropTypes.
+- To work with the PropTypes have to add a dependency called prop-types.
+
+npm install prop-types --save
+
+import PropTypes from 'prop-types';
+
+Basic Types :
+--------------
+PropTypes.any -> 
+PropTypes.bool -> 
+PropTypes.string
+number
+func
+array
+object
+Symbol
+
+Syntax:
+-------
+<Name_Of_Component>.propTypes = {
+
+    <prop_name> : <prop_type>
+}
+
+class Component{
+
+    static propTypes = {
+
+    <prop_name> : <prop_type>
+    }
+}
+
+Book 
+ |-> name (string)
+ |-> isbn (number)
+ |-> languages(array)
+ |-> publisher { name:'',date:'',version:''
+
+            }
+ |-> isPublished (true/false)
+           
+Renderable Types:
+-----------------
+- whether prop can be rendered by react or not.
+
+PropTypes.node :
+ - This prop can be any thing which cna rendered by react.
+ - A number, A string, element or an array
+
+PropTypes.element
+ - The prop should be a react element or not.
+ - The component should have a single child.
+ - If the component has multiple or no children we will get a warning message.
+
+<Button icon = {<fontAweSomeIcon/>} > 
+
+Instance Types :
+----------------
+-  check whether the prop is instance of particular type or not.
+Subject
+Comp.propTypes={
+  subject : PropTypes.instanceOf(Subject),
+  birthDate : PropTypes.instanceOf(Date) 
+}
+//Can you try the example on Instance Types.
+
+Multiple Types:
+---------------
+PropTypes.oneOf() : Set of Values. PropTypes.oneOf(['MALE','FEMALE','OTHER']) - GENDER
+
+PropTypes.oneOfType(): Set of types  PropTypes.oneOfType([bool,string,number,instaceof])
+
+Collection Types :
+-----------------
+PropTypes.array : - Checks whether the prop is an array or not.
+PropTypes.arrayOf : Checks whether the prop is an array with type. 
+  Comp.propTypes = {
+       fruits : PT.arrayOf(PropTypes.string),
+       multiArrayType:PT.arrayOf(PropTypes.oneOfType([bool,string,number,instaceof]))
+  }
+PT.object - 
+PropTypes.objectOf : - Used to check the type of the property values of an object. 
+                     // Object & each prop value is of particular type
+
+      Comp.propTypes = {
+       fruits : PT.objectOf(PropTypes.string), 
+       multiObjectType:PT.objectOf(PropTypes.oneOfType([bool,string,number,instaceof]))
+  }               
+
+PropTypes.shape :  
+  comp.pTs = {
+
+     ProfileProp : PropTypes.shape{
+       id: PT.number,
+       name :PT.string,
+       GENDER:PropTypes.oneOf(['MALE','FEMALE','OTHER']),
+       birthDate:PT.instaceof(Date)
+     }
+  } 
+ PropTypes.exact : 
+//subject,score
+ Component.PTs = {
+    subjectScoreProp : propTypes.exact({
+      subject : PTs.oneOf([M,S,SS]),
+      score : PTs. number
+    })
+ } 
+
+Custom Validators :
+-------------------
+The custom validation function takes three arguments.
+i) props : An object contains all the props.
+ii) propName : Name of the prop is going to validate.
+iii) componentName : Name of the component. 
+ return Error object from the custom validation function.
+
+ Custom validators on Collection:
+ --------------------------------
+ 
+
+
+
+
+
+
+
+
+  
+  

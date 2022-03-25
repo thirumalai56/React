@@ -1,0 +1,27 @@
+<!Doctype>
+<html>
+	<head>
+		<title> React List Example</title>
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<link href="app.css" rel="stylesheet"></link>
+	</head>
+	<body>
+		<div id="react-container">
+		</div>
+		<script type="text/babel">
+		class App extends React.Component{
+			render(){
+				return (<h1> HelloWorld {/* JSX Comment */}</h1>);
+			}
+		}
+		var reactElement = React.createElement(App,null,null);
+		
+		ReactDOM.render(reactElement,document.getElementById("react-container"));	
+		</script>
+	</body>
+	<!--
+	<h1> Hello World!</h1>
+    -->
+</html>

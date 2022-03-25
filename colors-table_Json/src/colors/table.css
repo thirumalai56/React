@@ -1,0 +1,25 @@
+table{
+    padding-top:5px;
+    margin-left:150px;  
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:22px;
+  /*  border-spacing:50px 0; */
+ /* border-collapse: collapse; */
+  width: 1000px;
+  /*margin:0.5em 0 2.5em;*/
+}
+table >tbody>tr:nth-child(even){
+    background-color:rgba(61, 71, 68, 0.24);
+}
+table>thead>tr{
+
+    text-align: left;
+}
+table>tbody>tr{
+
+    text-align: left;
+    border-bottom: 1px solid #e3e3e5;
+    line-height:40px;
+} 
+

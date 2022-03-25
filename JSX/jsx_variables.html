@@ -1,0 +1,47 @@
+iab<!Doctype>
+<html>
+	<head>
+		<title> React List Example</title>
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<link href="app.css" rel="stylesheet"></link>
+	</head>
+	<body>
+		<div id="react-container">
+		</div>
+		<script type="text/babel">
+		class App extends React.Component{
+			render(){
+				var name="Raghavan";
+				var customer = {name:'Ravi',age:20,salary:10000};
+				var carNames = ['Maruthi','VOLVO','MB'];
+				var number1 =20, number2=40;
+				return (
+				<div>
+					<h1> Hello {name} Welcome to JSX World! </h1>
+					<p> Customer Details {JSON.stringify(customer)} </p>
+					<p> Car Brands: {carNames.join(",")} </p>
+					<h1> JSX Features</h1>
+					<ul>
+						<li> Virtual DOM </li> 
+						<li> Components </li> 
+						<li> JSX </li>
+						<li> React Native </li>
+					</ul>	
+					<p className='heading'>The sum of 20 and 30 is {20+30}</p>
+					<p>The multiplication of {number1} and 
+					{number2} is {number1 *  number2}</p>
+				</div>
+				);
+			}
+		}
+		//var reactElement = React.createElement(App,null,null);
+		//<Component_Name/> <> ( JSX Elements )</>
+		ReactDOM.render(<App/>,document.getElementById("react-container"));	
+		</script>
+	</body>
+	<!--
+	<h1> Hello World!</h1>
+    -->
+</html>

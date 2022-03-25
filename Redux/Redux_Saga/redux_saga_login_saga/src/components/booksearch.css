@@ -1,0 +1,27 @@
+.search {
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search__input {
+  text-align: center;
+  width: 50%;
+  min-width: 100px;
+  height: 24px;
+  border: 1px solid #c9c9c9;
+  font-size: 15px;
+
+  
+}
+input:focus {
+    outline-color: tomato;
+  }
+  .app__title {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+  }

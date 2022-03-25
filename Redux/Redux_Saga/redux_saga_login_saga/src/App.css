@@ -1,0 +1,32 @@
+.nav-div{
+  float:right;
+  margin-top: 10px;
+
+}
+.nav-link{
+    display:flex;
+    list-style-type:none;
+    
+}
+.nav-link >li{
+
+    display:flex;
+   
+    margin-right:100px;
+}
+.nav-header{
+  display: inline-block;
+  /*text-align: center;
+  width:500px;
+  After adding the books hyperlink should remove this stuff
+  */
+}
+.navbar{
+  background-color:tomato;
+  color:white;
+}
+li>a{
+  text-decoration: none;
+  font-size:15px;
+  color:white;
+}

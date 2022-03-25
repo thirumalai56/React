@@ -1,0 +1,21 @@
+If we have <React.StrictMode> we will see the console.log in the constructor
+ and render twice.
+<React.StrictMode>
+
+
+Strict Mode
+1. StrictMode is a tool for highlighting potential problems in an application.
+2. Does not render any UI.
+3. It activates additional checks and warnings for the components.
+4. Strict Mode checks are run in Development mode only, 
+   they do not impact the production build.
+5. Use ful in detecting the deprecated features in React.
+   a) Identifying the unsafe lifecycle methods.
+      certain legacy lifecycle methods are unsafe for use in async React applications.
+   b) Warning about deprecated findDOMNode usage
+   c) Detecting legacy context API
+
+
+
+Note : This only applies to development mode. 
+Lifecycles will not be double-invoked in production mode.

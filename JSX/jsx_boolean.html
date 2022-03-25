@@ -1,0 +1,43 @@
+<!doctype>
+<html>
+	<head>
+		<title> JSX Boolean </title>
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<link href="app.css" rel="stylesheet"></link>
+	</head>
+	<body>
+		<div id="react-container">
+		</div>
+		<script type="text/babel">
+		class App extends React.Component{
+		//<Header> component based on the showHeader 
+			render(){
+				
+				return (
+				<div>
+					<input disabled={false}></input>
+					<div> undefined value {undefined}</div>
+					<div> false value {false}</div>
+					<div> true value {true}</div>
+					<div> null value {null}</div>
+					<div> 0 value {0}</div>
+					<div> NaN value {NaN}</div>
+					<div> EmptyString value {""}</div>
+					{/*
+					<div> {showHeader && <Header/> </div>
+					*/}
+				</div>
+				);
+			}
+		}
+		//var reactElement = React.createElement(App,null,null);
+		//<Component_Name/> <> ( JSX Elements )</>
+		ReactDOM.render(<App/>,document.getElementById("react-container"));	
+		</script>
+	</body>
+	<!--
+	<h1> Hello World!</h1>
+    -->
+</html>

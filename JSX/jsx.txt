@@ -1,0 +1,85 @@
+JSX
+---
+- Stands for JavaScriptXML or Extension.
+- Is an XML/HTML syntax - extends to the regular JavaScript.
+- write HTML syntax in React Code.
+- JSX is equal to 
+
+   React.createElement(type,props,...child)
+- easy to define / create HTML Templates.
+
+
+ No - 
+ 
+ Babel -> 
+  - JS Transpiler
+  - ES6 to ES5.
+  - JSX to JS Code.
+
+ JSX Comments :
+ --------------
+ {/* JSX Comments */} - dont render to the browser.
+ 
+ Variables:
+ ----------
+ var name = "Ram";
+ To output variables have to use the curly braces notation.
+ {}
+ <h1>Hello World {name} </h1>
+ 
+ Expressions:
+ ------------
+ {2+3}
+ {sum1+sum2}
+ 
+ Attributes:
+ ------------
+ background-color 
+ 
+ camelCase Notation.
+ 
+ class and for --> JS reserved keywords.
+ className and htmlFor
+ 
+ - can use the custom attributes. 
+  
+  conditional expression in JSX: 
+  -------------------------------
+  if/else
+  - logged In  Logout
+  - not  Login
+  
+ Style attribute:
+ ----------------
+ -  An object represenation.
+ -  key - styleName - value: styleValue.
+ - font-size -> fontSize, background-color -> backgroundColor
+  
+ JSX Boolean Attributes:
+------------------------
+- disabled, readonly, required,checked autoFocus
+
+- {true} /{false}
+- <input disabled = "false"/>
+ var booleanVal = "false";
+- if(booleanVal){
+      // going to execute 
+    }
+
+- Six Falsy values
+ null
+ undefined
+ ""/''
+ false
+ 0
+ NaN
+ <input disabled = {false}/>
+ 
+ <input disabled = {true}/> or <input disabled/>
+ 
+ JSX Boolean value rendering :
+ ------------------------------
+ 
+ Won't render these falsy values.
+ 
+ 
